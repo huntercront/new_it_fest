@@ -485,6 +485,20 @@ body {
     width: 100%;
 }
 
+.pc-7 {
+    flex: 0 0 58.333%;
+    max-width: 58.333%;
+    padding: 0 10px;
+    width: 100%;
+}
+
+.pc-5 {
+    flex: 0 0 41.666%;
+    max-width: 41.666%;
+    padding: 0 10px;
+    width: 100%;
+}
+
 .pc-2 {
     flex: 0 0 16.666%;
     max-width: 16.666%;
@@ -545,6 +559,22 @@ html.wf-active body {
     100% {
         background-position: 324px 0;
     }
+}
+
+.lazy-rect:before {
+    content: '';
+    display: table;
+    box-sizing: border-box;
+    width: 0;
+    height: 100%;
+    padding-bottom: 100%;
+}
+
+.lazy-rect img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
 .icon-right {

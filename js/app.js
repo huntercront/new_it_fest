@@ -136,7 +136,16 @@ document.addEventListener("DOMContentLoaded", function(event) {
             ],
             function() {});
 
-    }, 100);
+    }, 1000);
+
+    setTimeout(() => {
+        var l = new Loader();
+        l.require([
+                "./js/scroll.js"
+            ],
+            function() {});
+
+    }, 200);
 
 
 
