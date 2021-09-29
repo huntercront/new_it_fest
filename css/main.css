@@ -10,6 +10,10 @@ h2.h2 {
     border-radius: 2rem;
 }
 
+.about {
+    padding-bottom: 2rem;
+}
+
 p.sub-title {
     font-weight: 500;
     font-size: 1.2rem;
@@ -59,18 +63,10 @@ h2.h2+p.sub-title {
     font-weight: 400;
 }
 
-.for-bg img {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    z-index: -1;
-    height: 80%;
-    width: auto;
-}
-
 .for {
     padding: 15rem 0;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
 .play {

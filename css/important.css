@@ -525,6 +525,10 @@ html.wf-active body {
     font-family: 'Inter';
 }
 
+body {
+    overflow-x: hidden;
+}
+
 @keyframes lazyFade {
     0% {
         opacity: 0;
@@ -806,4 +810,80 @@ h1.h1 {
     height: 18rem;
     z-index: 10;
     backdrop-filter: blur(18px);
+}
+
+.palace-zone address {
+    margin-bottom: 0;
+}
+
+@media screen and (max-width:1024px) {
+    .time-zone {
+        left: 2rem;
+        top: 5%;
+    }
+    .hero .hero-content {
+        padding-top: 3rem;
+    }
+    .palace-zone {
+        bottom: 5%;
+    }
+}
+
+@media screen and (max-width:900px) {
+    .palace-zone {
+        width: 16rem;
+        height: 16rem;
+    }
+    .month,
+    .city,
+    .palace {
+        font-size: 1.1rem;
+    }
+    .hero-logo {
+        max-width: 16rem;
+    }
+    h1.h1 {
+        font-size: 2.5rem;
+    }
+    .title-zone::before {
+        width: 32rem;
+        height: 32rem;
+    }
+    .title-zone::after {
+        width: 28rem;
+        height: 28rem;
+    }
+    .day {
+        font-size: 3rem;
+    }
+    .time,
+    .palace {
+        font-size: 1.15rem;
+    }
+    .time-zone-inner {
+        padding: 2rem 5rem 1rem 3rem;
+        ;
+    }
+}
+
+@media screen and (max-width:740px) {
+    h1.h1 {
+        font-size: 2rem;
+        max-width: 20rem;
+        line-height: 1.25;
+        margin-bottom: 2rem;
+    }
+    .hero-logo {
+        max-width: 14rem;
+        transform: translate(0, 0);
+        margin-left: 2rem;
+        margin-top: -2rem;
+        margin-bottom: 2rem;
+    }
+    .main-btn {
+        width: 14rem;
+    }
+    .hero .hero-content {
+        justify-content: flex-start;
+    }
 }

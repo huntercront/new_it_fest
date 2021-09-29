@@ -65,53 +65,25 @@ Function.prototype.throttle = function(milliseconds, context) {
 createParalax()
 
 function createParalax() {
-    let bg = document.querySelector('.hero-pattern img');
-    let fog1 = document.querySelector('.palace-zone');
-    let fog2 = document.querySelector('.time-zone');
-    let fog3 = document.querySelector('.title-zone');
-    document.querySelector('.hero').addEventListener('mousemove', function(e) {
-        let x = e.clientX / window.innerWidth;
-        let y = e.clientY / window.innerHeight;
-        bg.style.transform = 'translate(-' + x * 50 + 'px, -' + y * 50 + 'px)';
-        fog1.style.transform = 'translate(+' + x * 50 + 'px, +' + y * 50 + 'px)';
-        fog3.style.transform = 'translate(+' + x * 100 + 'px, +' + y * 70 + 'px)';
-        fog2.style.transform = 'translate(-' + x * 50 + 'px, -' + y * 50 + 'px)';
-    }.throttle(100));
+    if (window.matchMedia("(min-width: 1024px)").matches) {
+        let bg = document.querySelector('.hero-pattern img');
+        let fog1 = document.querySelector('.palace-zone');
+        let fog2 = document.querySelector('.time-zone');
+        let fog3 = document.querySelector('.title-zone');
+        document.querySelector('.hero').addEventListener('mousemove', function(e) {
+            let x = e.clientX / window.innerWidth;
+            let y = e.clientY / window.innerHeight;
+            bg.style.transform = 'translate(-' + x * 50 + 'px, -' + y * 50 + 'px)';
+            fog1.style.transform = 'translate(+' + x * 50 + 'px, +' + y * 50 + 'px)';
+            fog3.style.transform = 'translate(+' + x * 100 + 'px, +' + y * 70 + 'px)';
+            fog2.style.transform = 'translate(-' + x * 50 + 'px, -' + y * 50 + 'px)';
+        }.throttle(100));
+    }
 
 }
 
 
 
-
-
-let mMenu = document.querySelector('.mobile-icon')
-let menu = document.querySelector('.header')
-let overlay = document.querySelector('.header-overley')
-let navLinks = document.querySelectorAll('.navigation');
-
-if (mMenu) {
-    mMenu.addEventListener('click', function(e) {
-        this.querySelector('.ham').classList.toggle('active')
-        menu.classList.toggle('visible')
-        overlay.classList.toggle('overley-active')
-    })
-    overlay.addEventListener('click', function(e) {
-        if (this.classList.contains('overley-active') && (mMenu.querySelector('.ham').classList.contains('active'))) {
-            menu.classList.toggle('visible')
-            this.classList.toggle('overley-active')
-            mMenu.querySelector('.ham').classList.toggle('active')
-        }
-    })
-    navLinks.forEach(function(navLink) {
-        navLink.addEventListener('click', function(event) {
-            if (menu.classList.contains('visible')) {
-                menu.classList.toggle('visible')
-                overlay.classList.toggle('overley-active')
-                mMenu.querySelector('.ham').classList.toggle('active')
-            }
-        });
-    });
-}
 
 
 
