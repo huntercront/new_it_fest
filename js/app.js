@@ -70,6 +70,7 @@ function createParalax() {
         let fog1 = document.querySelector('.palace-zone');
         let fog2 = document.querySelector('.time-zone');
         let fog3 = document.querySelector('.title-zone');
+        let fog4 = document.querySelector('.format-zone');
         document.querySelector('.hero').addEventListener('mousemove', function(e) {
             let x = e.clientX / window.innerWidth;
             let y = e.clientY / window.innerHeight;
@@ -77,14 +78,161 @@ function createParalax() {
             fog1.style.transform = 'translate(+' + x * 50 + 'px, +' + y * 50 + 'px)';
             fog3.style.transform = 'translate(+' + x * 100 + 'px, +' + y * 70 + 'px)';
             fog2.style.transform = 'translate(-' + x * 50 + 'px, -' + y * 50 + 'px)';
+            fog4.style.transform = 'translate(+' + x * 50 + 'px, +' + y * 50 + 'px)';
         }.throttle(100));
     }
 
 }
 
+if (document.querySelector('.programm-inner')) {
+    function intitDreag() {
+        (function(root, factory) {
+            if (typeof define === 'function' && define.amd) {
+                define(['exports'], factory);
+            } else if (typeof exports !== 'undefined') {
+                factory(exports);
+            } else {
+                factory((root.dragscroll = {}));
+            }
+        }(this, function(exports) {
+
+            var _window = window;
+            var _document = document;
+            var mousemove = 'mousemove';
+            var mouseup = 'mouseup';
+            var mousedown = 'mousedown';
+            var EventListener = 'EventListener';
+            var addEventListener = 'add' + EventListener;
+            var removeEventListener = 'remove' + EventListener;
+            var newScrollX, newScrollY;
+
+            var dragged = [];
+            var reset = function(i, el) {
+                for (i = 0; i < dragged.length;) {
+                    el = dragged[i++];
+                    el = el.container || el;
+                    el[removeEventListener](mousedown, el.md, 0);
+                    _window[removeEventListener](mouseup, el.mu, 0);
+                    _window[removeEventListener](mousemove, el.mm, 0);
+                }
+
+                // cloning into array since HTMLCollection is updated dynamically
+                dragged = [].slice.call(_document.getElementsByClassName('dragscroll'));
+                for (i = 0; i < dragged.length;) {
+                    (function(el, lastClientX, lastClientY, pushed, scroller, cont) {
+                        (cont = el.container || el)[addEventListener](
+                            mousedown,
+                            cont.md = function(e) {
+                                if (!el.hasAttribute('nochilddrag') ||
+                                    _document.elementFromPoint(
+                                        e.pageX, e.pageY
+                                    ) == cont
+                                ) {
+                                    pushed = 1;
+                                    lastClientX = e.clientX;
+                                    lastClientY = e.clientY;
+
+                                    e.preventDefault();
+                                }
+                            }, 0
+                        );
+
+                        _window[addEventListener](
+                            mouseup, cont.mu = function() {
+                                pushed = 0;
+                            }, 0
+                        );
+
+                        _window[addEventListener](
+                            mousemove,
+                            cont.mm = function(e) {
+                                if (pushed) {
+                                    (scroller = el.scroller || el).scrollLeft -=
+                                        newScrollX = (-lastClientX + (lastClientX = e.clientX));
+                                    scroller.scrollTop -=
+                                        newScrollY = (-lastClientY + (lastClientY = e.clientY));
+                                    if (el == _document.body) {
+                                        (scroller = _document.documentElement).scrollLeft -= newScrollX;
+                                        scroller.scrollTop -= newScrollY;
+                                    }
+                                }
+                            }, 0
+                        );
+                    })(dragged[i++]);
+                }
+            }
+
+
+            if (_document.readyState == 'complete') {
+                reset();
+            } else {
+                _window[addEventListener]('load', reset, 0);
+            }
+
+            exports.reset = reset;
+        }));
+
+        function getTransformValue(element, property) {
+            var values = element[0].style.transform.split(")");
+            for (var key in values) {
+                var val = values[key];
+                var prop = val.split("(");
+                if (prop[0].trim() == property)
+                    return prop[1];
+            }
+            return false;
+        }
+    }
+
+    let programm = document.querySelector('.programm-inner');
+    if (programm.scrollWidth > window.innerWidth) {
+        programm.classList.add('dragscroll');
+        intitDreag()
+    }
+
+    (function() {
+        var throttle = function(type, name, obj) {
+            obj = obj || window;
+            var running = false;
+            var func = function() {
+                if (running) { return; }
+                running = true;
+                requestAnimationFrame(function() {
+                    obj.dispatchEvent(new CustomEvent(name));
+                    running = false;
+                });
+            };
+            obj.addEventListener(type, func);
+        };
+        throttle("resize", "optimizedResize");
+    })();
+
+    window.addEventListener("optimizedResize", function() {
+        if (programm.scrollWidth > window.innerWidth && (!programm.classList.contains('dragscroll'))) {
+            programm.classList.add('dragscroll');
+            intitDreag()
+        }
+    });
+}
 
 
 
+function setCookie(name, value) {
+    var expires = "";
+    expires = "; expires=Fri, 31 Dec 9999 23:59:59 GMT";
+    document.cookie = name + "=" + (value || "") + expires + "; path=/";
+}
+
+function getCookie(name) {
+    var nameEQ = name + "=";
+    var ca = document.cookie.split(';');
+    for (var i = 0; i < ca.length; i++) {
+        var c = ca[i];
+        while (c.charAt(0) == ' ') c = c.substring(1, c.length);
+        if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length, c.length);
+    }
+    return null;
+}
 
 
 document.addEventListener("DOMContentLoaded", function(event) {
@@ -118,6 +266,24 @@ document.addEventListener("DOMContentLoaded", function(event) {
             function() {});
 
     }, 200);
+
+    if (!getCookie('alert')) {
+        setTimeout(() => {
+            let cookiesAlert = document.querySelector('.cookies');
+            let cookiesBtn = cookiesAlert.querySelector('.cookies-btn')
+            cookiesAlert.classList.add('show-alert')
+            cookiesBtn.addEventListener('click', function(e) {
+                cookiesAlert.classList.remove('show-alert');
+                setCookie('alert', 'show-alert')
+                setTimeout(() => { cookiesAlert.remove(); }, 300);
+            })
+        }, 3500);
+    }
+
+
+
+
+
 
 
 

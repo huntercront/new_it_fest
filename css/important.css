@@ -8,8 +8,6 @@
     --white-70: rgba(255, 255, 255, 0.7);
     --shadow-bace: 0px 16px 24px rgba(255, 255, 255, 0.08), 0px 2px 6px rgba(255, 255, 255, 0.06), 0px 0px 1px rgba(255, 255, 255, 0.04);
     --shadow-large: 0px 24px 32px rgba(255, 255, 255, 0.08), 0px 16px 24px rgba(255, 255, 255, 0.1), 0px 2px 6px rgba(255, 255, 255, 0.08), 0px 0px 1px rgba(0, 0, 0, 0.04);
-    ;
-    ;
     --transition-standart: transition 200ms ease-in;
     --transition-fast: transition 125ms ease-in;
 }
@@ -382,9 +380,7 @@ html {
 }
 
 .r {
-    display: -ms-flexbox;
     display: flex;
-    -ms-flex-wrap: wrap;
     flex-wrap: wrap;
     margin-right: -10px;
     margin-left: -10px;
@@ -400,12 +396,6 @@ html {
 
 .container-large {
     max-width: 1136px;
-}
-
-body {
-    background-image: url("data:image/svg+xml,%3Csvg width='1138' height='510' viewBox='0 0 1138 510' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 0V510' stroke='%2325262C'/%3E%3Cpath d='M379.32 0V510' stroke='%2325262C'/%3E%3Cpath d='M758.68 0V510' stroke='%2325262C'/%3E%3Cpath d='M569 0V510' stroke='%2325262C'/%3E%3Cpath d='M190.68 0V510' stroke='%2325262C'/%3E%3Cpath d='M947.32 0V510' stroke='%2325262C'/%3E%3Cpath d='M1137 0V510' stroke='%2325262C'/%3E%3C/svg%3E%0A");
-    background-position: center center;
-    background-repeat: repeat-y;
 }
 
 .container {
@@ -506,6 +496,13 @@ body {
     width: 100%;
 }
 
+.pc-2_5 {
+    flex: 0 0 20.8333%;
+    max-width: 20.8333%;
+    padding: 0 10px;
+    width: 100%;
+}
+
 .pc-10 {
     flex: 0 0 83.333%;
     max-width: 83.333%;
@@ -519,6 +516,45 @@ body {
 
 .pc-p6 {
     padding: 6rem 0;
+}
+
+@media screen and (max-width:854px) {
+    .t-6 {
+        flex: 0 0 50%;
+        max-width: 50%;
+    }
+    .t-4 {
+        flex: 0 0 33.333%;
+        max-width: 33.333%;
+    }
+    .t-12 {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+    .t-low.container-large {
+        padding: 0;
+    }
+    .t-order-0 {
+        order: 0;
+    }
+    .t-order-1 {
+        order: 1;
+    }
+}
+
+@media screen and (max-width:640px) {
+    .tl-6 {
+        flex: 0 0 50%;
+        max-width: 50%;
+    }
+}
+
+.acn-logo {
+    position: absolute;
+    top: 1rem;
+    right: 0rem;
+    width: 8rem;
+    z-index: 200;
 }
 
 html.wf-active body {
@@ -749,7 +785,8 @@ h1.h1 {
 }
 
 .month,
-.city {
+.city,
+.hero-content .format {
     font-weight: 600;
     font-size: 1.25rem;
     padding: 0.25rem 0.5rem;
@@ -793,33 +830,56 @@ h1.h1 {
 .hero-pattern img,
 .time-zone,
 .palace-zone,
-.title-zone {
+.title-zone,
+.format-zone {
     transition: 150ms linear;
     transition-property: transform;
     will-change: transform;
 }
 
-.palace-zone {
+.palace-zone,
+.format-zone {
     position: absolute;
-    bottom: 10%;
-    right: 0;
     background: rgba(160, 1, 252, 0.47);
     box-shadow: 0px 4px 90px rgba(160, 1, 252, 0.56);
     border-radius: 100%;
-    width: 18rem;
-    height: 18rem;
     z-index: 10;
     backdrop-filter: blur(18px);
+}
+
+.palace-zone {
+    width: 18rem;
+    height: 18rem;
+    bottom: 10%;
+    right: 0;
+}
+
+.format-zone {
+    left: 20%;
+    bottom: 8%;
+    width: 12rem;
+    height: 12rem;
 }
 
 .palace-zone address {
     margin-bottom: 0;
 }
 
+.hero-content .format {
+    margin-bottom: 0.25rem;
+}
+
+@media screen and (max-width:1104px) {
+    .format-zone {
+        left: 10%;
+        bottom: 8%;
+    }
+}
+
 @media screen and (max-width:1024px) {
     .time-zone {
-        left: 2rem;
-        top: 5%;
+        left: 4rem;
+        top: 7%;
     }
     .hero .hero-content {
         padding-top: 3rem;
@@ -830,10 +890,6 @@ h1.h1 {
 }
 
 @media screen and (max-width:900px) {
-    .palace-zone {
-        width: 16rem;
-        height: 16rem;
-    }
     .month,
     .city,
     .palace {
@@ -854,15 +910,26 @@ h1.h1 {
         height: 28rem;
     }
     .day {
-        font-size: 3rem;
+        font-size: 2.5rem;
     }
     .time,
     .palace {
         font-size: 1.15rem;
     }
-    .time-zone-inner {
-        padding: 2rem 5rem 1rem 3rem;
-        ;
+}
+
+@media screen and (max-width:854px) {
+    .format-zone {
+        left: 5%;
+        bottom: 5%;
+    }
+}
+
+@media screen and (max-width:768px) {
+    .palace-zone {
+        width: 16rem;
+        height: 16rem;
+        right: 0;
     }
 }
 
@@ -883,7 +950,103 @@ h1.h1 {
     .main-btn {
         width: 14rem;
     }
+    .time-zone {
+        left: 0rem;
+        top: 0;
+    }
+    .time-zone-inner {
+        padding: 1rem 3rem 1rem 2rem;
+        z-index: 20;
+    }
+    .month,
+    .city,
+    .palace,
+    .hero-content .format {
+        font-size: 1rem;
+    }
+    .hero .container-large {
+        padding: 0;
+        overflow: hidden;
+    }
+    .acn-logo {
+        right: 1rem;
+    }
+}
+
+@media screen and (max-width:640px) {
     .hero .hero-content {
-        justify-content: flex-start;
+        padding-top: 5rem;
+        justify-content: center;
+        padding-bottom: 8rem;
+    }
+    .time-zone {
+        z-index: 20;
+    }
+    .palace-zone {
+        background: transparent;
+        box-shadow: none;
+        backdrop-filter: none;
+    }
+    .hero-logo {
+        margin-top: -1;
+        margin-bottom: 1rem;
+    }
+    .palace-zone {
+        width: auto;
+        height: auto;
+        left: 1rem;
+        right: auto;
+    }
+    .format-zone {
+        width: auto;
+        height: auto;
+        left: auto;
+        right: 1rem;
+        bottom: calc(5% + 1.3rem);
+        background: transparent;
+        box-shadow: none;
+        backdrop-filter: none;
+    }
+    .format-zone-inner {
+        align-items: flex-end;
+    }
+}
+
+@media screen and (max-width:440px) {
+    .hero .hero-content {
+        padding-top: 5rem;
+        justify-content: center;
+        padding-bottom: 8rem;
+    }
+    .time-zone-inner {
+        box-shadow: none;
+        text-align: left;
+        background: none;
+        padding: 0;
+    }
+    .time-zone {
+        top: 1rem;
+        left: 1rem;
+    }
+    .title-zone {
+        padding: 0;
+    }
+    h1.h1 {
+        font-size: 2.25rem;
+        line-height: 1.15;
+        margin-bottom: 3rem;
+    }
+    .month,
+    .city,
+    .palace,
+    .hero-content .format {
+        font-size: 0.9rem;
+    }
+    .format-info {
+        font-weight: 700;
+    }
+    .format-info,
+    .palce-address {
+        font-size: 0.85rem;
     }
 }

@@ -1,209 +1,308 @@
 <!DOCTYPE html>
 <html lang="ru">
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="dns-prefetch" href="https://ajax.googleapis.com">
-    <link rel="preconnect" href="https://ajax.googleapis.com">
-    <link rel="dns-prefetch" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="dns-prefetch" href="https://fonts.gstatic.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com">
+ <head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="dns-prefetch" href="https://ajax.googleapis.com">
+  <link rel="preconnect" href="https://ajax.googleapis.com">
+  <link rel="dns-prefetch" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="dns-prefetch" href="https://fonts.gstatic.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+
+
+
+  <?php $meta_description = get_field('meta-descr', get_queried_object_id());
+				    $meta_keywords = get_field('meta-keywords', get_queried_object_id());
+				    $meta_title = get_field('meta_title', get_queried_object_id());
+					$meta_img =  get_field('meta_img', get_queried_object_id()) ?>
+
+  <title>
+   <?php echo $meta_title; ?>
+  </title>
+  <meta name="ROBOTS" content="FOLLOW,INDEX">
+  <meta name="description" content="<?php echo $meta_description; ?>">
+  <meta name="keywords" content="<?php echo $meta_keywords; ?>">
+  <meta property="og:url" content="<?php echo get_site_url(); ?>">
+  <meta property="og:title" content="<?php echo $meta_title; ?>">
+  <meta property="og:image" content="<?php echo$meta_img; ?>">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <link rel="image_src" href="<?php echo$meta_img; ?>">
+  <meta name="twitter:image" content="<?php echo$meta_img; ?>">
+  <meta property="aiturec:image" content="<?php echo$meta_img; ?>">
+  <meta property="vk:image" content="<?php echo$meta_img; ?>">
+  <meta property="og:image" content="<?php echo$meta_img; ?>">
+  <link rel="image_src" href="<?php echo$meta_img; ?>">
+  <meta property="aiturec:title" content="<?php echo $meta_title; ?>">
+  <meta property="aiturec:description" content="<?php echo $meta_description; ?>">
+  <meta property="og:description" content="<?php echo $meta_description; ?>">
+  <meta name="twitter:description" content="<?php echo $meta_description; ?>">
+  <meta name="twitter:title" content="<?php echo $meta_title; ?>">
+  <meta name="application-name" content="<?php echo $meta_t; ?>">
 
 
 
 
-    <title>Document</title>
-    <link rel="stylesheet" href="./css/important.css">
-    <link rel="stylesheet" href="./css/main.css" media="print" async onload="this.media='all'">
-    <noscript>
+
+
+  <title>Document</title>
+  <link rel="stylesheet" href="./css/important.css">
+  <link rel="stylesheet" href="./css/main.css" media="print" async onload="this.media='all'">
+  <noscript>
 		<link rel="stylesheet" href="./css/main.css">
 	</noscript>
 
-</head>
+ </head>
 
 
-<body>
-    <header class="header"></header>
-    <main class="main">
-        <section class="hero o-large-bottom">
-            <div class="container-large">
+ <body>
+
+  <div class="cookies">
+   <div class="cookies-inner c-s">
+    <div class="cookie-icon">
+     <picture>
+      <source type="image/webp" data-srcset="./img/cookies@1x.webp 1x, ./img/cookies@2x.webp 2x">
+      <source type="image/png" data-srcset="./img/cookies@1x.png 1x, ./img/cookies@2x.png 2x">
+      <img class="lazy" width="80" height="80" data-src="./img/cookies@1x.png" alt="Спикеры">
+     </picture>
+    </div>
+    <span class="cookie-text">Пользуясь сайтом, вы соглашаетесь с тем, что мы используем cookies</span>
+    <button class="width-low cookies-btn">Окей</button>
+   </div>
+  </div>
+  <header class="header"></header>
+  <main class="main">
+   <section class="hero o-large-bottom">
+    <div class="container-large">
 
 
-                <div class="hero-content c-c f-column">
-                    <div class="title-zone c-c f-column">
-                        <div class="hero-logo">
-                            <img src="./img/new_it_logo.svg" alt="New IT fest logo">
-                        </div>
-                        <h1 class="h1">Фестиваль информационных технологий</h1>
-                        <a href="#register" class="buttons main-btn btn-sm c-sb">
-                            <div class="button-label">Регистрация</div>
-                            <div class="icon-right icon-s c-c">
-                                <svg fill="none" viewBox="0 0 40 40">
+     <div class="hero-content c-c f-column">
+      <div class="acn-logo c-c">
+       <img src="./img/acn-logo-white.svg" alt="accenture">
+      </div>
+      <div class="title-zone c-c f-column">
+       <div class="hero-logo">
+        <img src="./img/new_it_logo.svg" alt="New IT fest logo">
+       </div>
+       <h1 class="h1">Фестиваль информационных технологий</h1>
+       <a href="#register" class="buttons main-btn btn-sm c-sb">
+        <div class="button-label">Регистрация</div>
+        <div class="icon-right icon-s c-c">
+         <svg fill="none" viewBox="0 0 40 40">
 									<path fill="#fff"
 										d="M11.8 40h16.4c7 0 11.8-4.6 11.8-11.3V11.3C40 4.6 35.2 0 28.2 0H11.8C4.8 0 0 4.6 0 11.3v17.4C0 35.4 4.8 40 11.8 40Z"
 										opacity=".4" />
 									<path fill="#fff"
 										d="m21.7 28.6 7.5-7.5c.6-.6.6-1.6 0-2.2l-7.5-7.5a1.5 1.5 0 0 0-2.1 2.2l5 4.9H11.7a1.5 1.5 0 1 0 0 3h12.7l-5 5a1.5 1.5 0 0 0 2.2 2Z" />
 									< </svg>
-                            </div>
-                        </a>
+        </div>
+       </a>
 
-                    </div>
-                    <div class="time-zone">
-                        <div class="time-zone-inner c-c f-column">
-                            <time datetime="2021-11-20T11:54">
+      </div>
+      <div class="time-zone">
+       <div class="time-zone-inner c-c f-column">
+        <time datetime="2021-11-20T11:54">
 								<div class="day">20</div>
 								<div class="month">ноября</div>
 								<div class="time">11:00</div>
 							</time>
-                        </div>
+       </div>
+      </div>
 
-                    </div>
-                    <div class="palace-zone c-c">
-                        <address class="palace-zone-inner s-s f-column">
+      <div class="format-zone c-c">
+       <div class="format-zone-inner s-s f-column">
+        <p class="format">Формат</p>
+        <p class="format-info no-margin ">Онлайн и офлайн</p>
+       </div>
+      </div>
+      <div class="palace-zone c-c">
+       <address class="palace-zone-inner s-s f-column">
 							<div class="city">Тверь</div>
 							<div class="palace">Бизнес-центр “Тверь”</div>
 							<div class="palce-address">Смоленский переулок 29</div>
 						</address>
-                    </div>
-                    <div class="hero-pattern">
-                        <img src="./img/pattern.svg" alt="">
-                    </div>
+      </div>
+      <div class="hero-pattern">
+       <img src="./img/pattern.svg" alt="">
+      </div>
 
-                </div>
-            </div>
+     </div>
+    </div>
 
 
 
-            <div class="bg-video"> <video class="lazy" playsinline autoplay="true" loop="true" data-src="./video/hero.mp4" muted>
+    <div class="bg-video"> <video class="lazy" playsinline autoplay="true" loop="true" data-src="./video/hero.mp4" muted>
 					<source type="video/mp4" data-src="./video/hero.mp4" />
 				</video> </div>
-            <div class="video-overlay"></div>
-        </section>
+    <div class="video-overlay"></div>
+   </section>
 
-        <section class="about pc-p6">
-            <div class="container-large">
-                <div class="container">
+   <section class="about pc-p6">
+    <div class="container-large t-low">
+     <div class="container">
 
-                    <div class="r">
-                        <div class="pc-6">
-                            <h2 class="h2">New IT Fest</h2>
-                            <p class="sub-title">New IT Fest – конференция об IT-трендах, организованная компанией Accenture.
-                            </p>
-                            <p class="w-70">Микросервисная архитектура и высоконагрузочное тестирование, компьютерное зрение и машинное обучение, DevOps и облачная инфраструктура, бизнес- анализ и управление проектами – более 20 докладов с кейсами о применении новейших
-                                технологий.
-                            </p>
-                        </div>
-                        <div class="pc-6">
-                            <div class="r">
-                                <div class="pc-4">
-                                    <div class="about-icon c-c">
-                                        <picture>
-                                            <source type="image/webp" data-srcset="./img/about/speacer@1x.webp 1x, ./img/about/speacer@2x.webp 2x">
-                                            <source type="image/png" data-srcset="./img/about/speacer@1x.png 1x, ./img/about/speacer@2x.png 2x">
-                                            <img class="lazy" width="80" height="80" data-src="./img/about/speacer@1x.png" alt="Спикеры">
-                                        </picture>
-                                    </div>
-                                    <p class="numbers">20+</p>
-                                    <p>Спикеров</p>
+      <div class="r">
+       <div class="pc-6 t-12">
+        <h2 class="h2">New IT Fest</h2>
+        <p class="sub-title">New IT Fest – конференция об IT-трендах, организованная компанией Accenture.
+        </p>
+        <p class="w-70">Микросервисная архитектура и высоконагрузочное тестирование, компьютерное зрение и машинное обучение, DevOps и облачная инфраструктура, бизнес- анализ и управление проектами – более 20 докладов с кейсами о применении новейших технологий.
+        </p>
+       </div>
+       <div class="pc-6 t-12">
+        <div class="r">
+         <div class="pc-4">
+          <div class="about-icon c-c">
+           <picture>
+            <source type="image/webp" data-srcset="./img/about/speacer@1x.webp 1x, ./img/about/speacer@2x.webp 2x">
+            <source type="image/png" data-srcset="./img/about/speacer@1x.png 1x, ./img/about/speacer@2x.png 2x">
+            <img class="lazy" width="80" height="80" data-src="./img/about/speacer@1x.png" alt="Спикеры">
+           </picture>
+          </div>
+          <p class="numbers">20+</p>
+          <p>Спикеров</p>
 
-                                </div>
-                                <div class="pc-4">
-                                    <div class="about-icon c-c">
-                                        <picture>
-                                            <source type="image/webp" data-srcset="./img/about/palce@1x.webp 1x, ./img/about/palce@2x.webp 2x">
-                                            <source type="image/png" data-srcset="./img/about/palce@1x.png 1x, ./img/about/palce@2x.png 2x">
-                                            <img class="lazy" width="80" height="80" data-src="./img/about/palce@1x.png" alt="Площадка">
-                                        </picture>
-                                    </div>
-                                    <p class="numbers">5</p>
-                                    <p>Залов</p>
+         </div>
+         <div class="pc-4">
+          <div class="about-icon c-c">
+           <picture>
+            <source type="image/webp" data-srcset="./img/about/palce@1x.webp 1x, ./img/about/palce@2x.webp 2x">
+            <source type="image/png" data-srcset="./img/about/palce@1x.png 1x, ./img/about/palce@2x.png 2x">
+            <img class="lazy" width="80" height="80" data-src="./img/about/palce@1x.png" alt="Площадка">
+           </picture>
+          </div>
+          <p class="numbers">5</p>
+          <p>Залов</p>
 
-                                </div>
-                                <div class="pc-4">
-                                    <div class="about-icon c-c">
-                                        <picture>
-                                            <source type="image/webp" data-srcset="./img/about/peoples@1x.webp 1x, ./img/about/peoples@2x.webp 2x">
-                                            <source type="image/png" data-srcset="./img/about/peoples@1x.png 1x, ./img/about/peoples@2x.png 2x">
-                                            <img class="lazy" width="80" height="80" data-src="./img/about/peoples@1x.png" alt="Участники">
-                                        </picture>
-                                    </div>
-                                    <p class="numbers">500+</p>
-                                    <p>Участников</p>
+         </div>
+         <div class="pc-4">
+          <div class="about-icon c-c">
+           <picture>
+            <source type="image/webp" data-srcset="./img/about/peoples@1x.webp 1x, ./img/about/peoples@2x.webp 2x">
+            <source type="image/png" data-srcset="./img/about/peoples@1x.png 1x, ./img/about/peoples@2x.png 2x">
+            <img class="lazy" width="80" height="80" data-src="./img/about/peoples@1x.png" alt="Участники">
+           </picture>
+          </div>
+          <p class="numbers">500+</p>
+          <p>Участников</p>
 
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+         </div>
+        </div>
+       </div>
+      </div>
+     </div>
 
-            </div>
-        </section>
+    </div>
+   </section>
 
-        <section class="for rel lazy o-large-bottom o-large-top pc-p6" data-bg="./img/for/for@1x.jpg" data-bg-hidpi="./img/for/for@2x.jpg">
-            <div class="container">
-                <div class="c-c for-text">
-                    <h4 class="for-descr">
-                        Конференция будет интересна всем, кто учится/работает в сфере IT и хочет развиваться профессионально.
-                    </h4>
-                </div>
-            </div>
-        </section>
 
-        <div class="cta rel pc-p6">
-            <div class="container">
-                <div class="cta-button c-c">
-                    <a href="#register" class="buttons main-btn btn-sm c-sb">
-                        <div class="button-label">Регистрация</div>
-                        <div class="icon-right icon-s c-c">
-                            <svg fill="none" viewBox="0 0 40 40">
+
+
+   <section class="for rel pc-p6" data-bg="./img/for/for@1x.jpg">
+    <div class="container">
+     <div class="r c-c">
+      <div class="pc-7 t-12">
+       <svg viewBox="0 0 544 309" fill="none" xmlns="http://www.w3.org/2000/svg">
+			
+				<clipPath id="cropRight">
+					<path class="animate-1"
+						d="M70 6.3C22.8 16.5 4.2 72.3.8 99c-4 43.5 20 87.6 38.5 100 18.5 12.4 82.6 63.6 201-11.2C358.9 113.1 346 51.1 326.2 34.1c-19.8-17.1-63-3.5-90.2 2.5-21.8 4.8-47-6.4-56.9-12.7C162.3 14 117-3.8 70 6.3Z"
+						fill="white" />
+				</clipPath>
+				<path class="animate-3"
+					d="M212.4 22.5c-6.4-1.3-12.2-5.6-9.5-14.1 4.7-10.6 12-9.8 23.3-5.2 10.3 4.2 12 10 12.2 12 0 .3 0 .7-.2 1-1.1 2.3-6.6 10.4-25.8 6.3Z"
+					fill="#A001FC" />
+				<clipPath id="cropLeft">
+					<path class="animate-2"
+						d="M257.2 299.7c66.6-9.6 54.8-16 84.8-1.8 11.4 5.4 36.6 20.2 52 11 15.4-9.3 25.4-40.5 22.7-61.3-2.7-20.8 27.7-60.2 59.4-87 31.6-26.8 50.3-91.8 11.4-118.6-39-26.8-70.5-15.8-90.3-4.5-38.2 21.7-45 87.2-86 125.3-31.3 29-53 42-92.4 58.4-44.6 18.7-44.8 90.6 38.4 78.5Z"
+						fill="white" />
+					<path class="animate-4"
+						d="M469 195c-18.6 14-27.2 24.5-23.5 37.6 7 24.7 52.5 28.2 79 18.9 26.6-9.4 21.1-28 5.2-55.5-16-27.5-42-15.1-60.6-1Z"
+						fill="white" />
+					<path
+						d="M124.886 248.512C116.902 253.449 117.388 266.677 123.829 274.562C131.492 283.943 143.285 283.154 154.838 273.815C166.391 264.477 161.325 253.027 157.99 249.526C154.655 246.026 134.867 242.342 124.886 248.512Z"
+						fill="white" />
+				</clipPath>
+			
+				<g style="clip-path:url(#cropLeft);">
+					<image id="imageLeft" style="overflow:visible;" width="450" height="302" xlink:href="./img/left-img.jpg"
+						transform="matrix(1.1 0 0 1.1 120 -10)"></image>
+				</g>
+			
+				<g style="clip-path:url(#cropRight);">
+					<image id="imageLeft" style="overflow:visible;" width="415" height="248" xlink:href="./img/right-img.jpg"
+						transform="matrix(1 0 0 1 -30 -17)"></image>
+				</g>
+			</svg>
+      </div>
+      <div class="pc-5 t-12">
+       <div class="c-c for-text">
+        <h4 class="for-descr">
+         Конференция будет интересна всем, кто учится/работает в сфере IT и хочет развиваться профессионально.
+        </h4>
+       </div>
+      </div>
+     </div>
+
+    </div>
+   </section>
+
+
+
+
+
+   <div class="cta rel pc-p6">
+    <div class="container">
+     <div class="cta-button c-c">
+      <a href="#register" class="buttons main-btn btn-sm c-sb">
+       <div class="button-label">Регистрация</div>
+       <div class="icon-right icon-s c-c">
+        <svg fill="none" viewBox="0 0 40 40">
 																						<path fill="#fff"
 																							d="M11.8 40h16.4c7 0 11.8-4.6 11.8-11.3V11.3C40 4.6 35.2 0 28.2 0H11.8C4.8 0 0 4.6 0 11.3v17.4C0 35.4 4.8 40 11.8 40Z"
 																							opacity=".4" />
 																						<path fill="#fff"
 																							d="m21.7 28.6 7.5-7.5c.6-.6.6-1.6 0-2.2l-7.5-7.5a1.5 1.5 0 0 0-2.1 2.2l5 4.9H11.7a1.5 1.5 0 1 0 0 3h12.7l-5 5a1.5 1.5 0 0 0 2.2 2Z" />
 																						< </svg>
-                        </div>
-                    </a>
-                </div>
-            </div>
-            <div class="anim-text">
-                <div class="anim-text-inner c-s">
-                    <div>New IT Fest 2021</div>
-                    <div>New IT Fest 2021</div>
-                </div>
-            </div>
-        </div>
+       </div>
+      </a>
+     </div>
+    </div>
+    <div class="anim-text">
+     <div class="anim-text-inner c-s">
+      <div>New IT Fest 2021</div>
+      <div>New IT Fest 2021</div>
+     </div>
+    </div>
+   </div>
 
-        <section class="how-be rel o-large-bottom o-large-top pc-p6">
-            <div class="container rel">
-                <h2 class="h2">New IT Fest 2019</h2>
-                <p class="sub-title">Посмотри как это было</p>
-                <div class="c-c see-video">
-                    <a href="https://www.youtube.com/embed/AhlyGOOVDaQ" class="btn c-c see-rep" data-fslightbox="video" data-type="youtube" rel="nofollow">
-                        <div class="play play-blue c-c"><span class="triangle"><svg class="play-icon"
+   <section class="how-be rel o-large-bottom o-large-top pc-p6">
+    <div class="container rel">
+     <h2 class="h2">New IT Fest 2019</h2>
+     <p class="sub-title">Посмотри как это было</p>
+     <div class="c-c see-video">
+      <a href="https://www.youtube.com/embed/AhlyGOOVDaQ" class="btn c-c see-rep" data-fslightbox="video" data-type="youtube" rel="nofollow">
+       <div class="play play-blue c-c"><span class="triangle"><svg class="play-icon"
 									viewBox="0 0 13 14" fill="none" xmlns="http://www.w3.org/2000/svg">
 									<path
 										d="M0.914062 11.5173C0.914062 13.056 2.57892 14.0183 3.91225 13.2504L11.503 8.87844C12.8387 8.10911 12.8387 6.18159 11.503 5.41226L3.91225 1.04031C2.57892 0.272366 0.914062 1.23473 0.914062 2.77341V11.5173Z"
 										fill="white" fill-opacity="0.63" />
 								</svg>
 							</span></div>
-                        <div class="btn-text">Видеорепортаж New IT Fest 2019</div>
-                    </a>
-                </div>
-            </div>
-            <div class="container-large">
-                <div class="media">
-                    <div class="r">
-                        <div class="pc-10">
-                            <div class="playlist">
-                                <div class="r">
-                                    <div class="pc-3">
-                                        <a href="https://www.youtube.com/embed/zhSQaMRT5rc" data-fslightbox="video" data-type="youtube" class="video-wrapper c-c" rel="nofollow">
-                                            <button aria-label="Помотреть видео" class="c-c btn">
+       <div class="btn-text">Видеорепортаж New IT Fest 2019</div>
+      </a>
+     </div>
+    </div>
+    <div class="container-large">
+     <div class="media">
+      <div class="r">
+
+       <div class="pc-2_5 t-4 tl-6">
+        <a href="https://www.youtube.com/embed/zhSQaMRT5rc" data-fslightbox="video" data-type="youtube" class="video-wrapper c-c" rel="nofollow">
+         <button aria-label="Помотреть видео" class="c-c btn">
 											<div class="play play-white c-c"><span class="triangle"><svg class="play-icon" viewBox="0 0 13 14" fill="none"
 														xmlns="http://www.w3.org/2000/svg">
 														<path
@@ -213,21 +312,21 @@
 												</span></div>
 										</button>
 
-                                            <div class="bg-video"> <video class="lazy" playsinline autoplay="true" loop="true" data-src="./video/o_smetanin.mp4" muted>
+         <div class="bg-video"> <video class="lazy" playsinline autoplay="true" loop="true" data-src="./video/o_smetanin.mp4" muted>
 																								<source type="video/mp4" data-src="./video/o_smetanin.mp4" />
 																							</video> </div>
-                                        </a>
-                                        <div class="video-descr">
-                                            <p class="video-theme">
-                                                Проектирование Frontend архитектур
-                                            </p>
-                                            <p class="small w-70">Олег Сметанин</p>
-                                        </div>
-                                    </div>
+        </a>
+        <div class="video-descr">
+         <p class="video-theme">
+          Проектирование Frontend архитектур
+         </p>
+         <p class="small w-70">Олег Сметанин</p>
+        </div>
+       </div>
 
-                                    <div class="pc-3">
-                                        <a href="https://www.youtube.com/embed/BRZlkljynOg" data-fslightbox="video" data-type="youtube" class="video-wrapper c-c" rel="nofollow">
-                                            <button aria-label="Помотреть видео" class="c-c btn">
+       <div class="pc-2_5 t-4 tl-6">
+        <a href="https://www.youtube.com/embed/BRZlkljynOg" data-fslightbox="video" data-type="youtube" class="video-wrapper c-c" rel="nofollow">
+         <button aria-label="Помотреть видео" class="c-c btn">
 																																																																			<div class="play play-white c-c"><span class="triangle"><svg class="play-icon" viewBox="0 0 13 14"
 																																																																						fill="none" xmlns="http://www.w3.org/2000/svg">
 																																																																						<path
@@ -237,21 +336,21 @@
 																																																																				</span></div>
 																																																																		</button>
 
-                                            <div class="bg-video"> <video class="lazy" playsinline autoplay="true" loop="true" data-src="./video/k_mashcov.mp4" muted>
+         <div class="bg-video"> <video class="lazy" playsinline autoplay="true" loop="true" data-src="./video/k_mashcov.mp4" muted>
 																																																																				<source type="video/mp4" data-src="./video/k_mashcov.mp4" />
 																																																																			</video> </div>
-                                        </a>
-                                        <div class="video-descr">
-                                            <p class="video-theme">
-                                                Микросервисы, Kafka, Camunda и вот это вот всё
-                                            </p>
-                                            <p class="small w-70">Кирилл Машков</p>
-                                        </div>
-                                    </div>
+        </a>
+        <div class="video-descr">
+         <p class="video-theme">
+          Микросервисы, Kafka, Camunda и вот это вот всё
+         </p>
+         <p class="small w-70">Кирилл Машков</p>
+        </div>
+       </div>
 
-                                    <div class="pc-3">
-                                        <a href="https://www.youtube.com/embed/oS3P2xktcFQ" data-fslightbox="video" data-type="youtube" class="video-wrapper c-c" rel="nofollow">
-                                            <button aria-label="Помотреть видео" class="c-c btn">
+       <div class="pc-2_5 t-4 tl-6">
+        <a href="https://www.youtube.com/embed/oS3P2xktcFQ" data-fslightbox="video" data-type="youtube" class="video-wrapper c-c" rel="nofollow">
+         <button aria-label="Помотреть видео" class="c-c btn">
 																																																																			<div class="play play-white c-c"><span class="triangle"><svg class="play-icon" viewBox="0 0 13 14"
 																																																																						fill="none" xmlns="http://www.w3.org/2000/svg">
 																																																																						<path
@@ -261,21 +360,21 @@
 																																																																				</span></div>
 																																																																		</button>
 
-                                            <div class="bg-video"> <video class="lazy" playsinline autoplay="true" loop="true" data-src="./video/a_strelnikov.mp4" muted>
+         <div class="bg-video"> <video class="lazy" playsinline autoplay="true" loop="true" data-src="./video/a_strelnikov.mp4" muted>
 																																																																				<source type="video/mp4" data-src="./video/a_strelnikov.mp4" />
 																																																																			</video> </div>
-                                        </a>
-                                        <div class="video-descr">
-                                            <p class="video-theme">
-                                                ML для повышения эффективности Collection
-                                            </p>
-                                            <p class="small w-70">Александр Стрельников</p>
-                                        </div>
-                                    </div>
+        </a>
+        <div class="video-descr">
+         <p class="video-theme">
+          ML для повышения эффективности Collection
+         </p>
+         <p class="small w-70">Александр Стрельников</p>
+        </div>
+       </div>
 
-                                    <div class="pc-3">
-                                        <a href="https://www.youtube.com/embed/cbk-AYF4vhI" data-fslightbox="video" data-type="youtube" class="video-wrapper c-c" rel="nofollow">
-                                            <button aria-label="Помотреть видео" class="c-c btn">
+       <div class="pc-2_5 t-4 tl-6">
+        <a href="https://www.youtube.com/embed/cbk-AYF4vhI" data-fslightbox="video" data-type="youtube" class="video-wrapper c-c" rel="nofollow">
+         <button aria-label="Помотреть видео" class="c-c btn">
 																																																																			<div class="play play-white c-c"><span class="triangle"><svg class="play-icon" viewBox="0 0 13 14"
 																																																																						fill="none" xmlns="http://www.w3.org/2000/svg">
 																																																																						<path
@@ -285,171 +384,675 @@
 																																																																				</span></div>
 																																																																		</button>
 
-                                            <div class="bg-video"> <video class="lazy" playsinline autoplay="true" loop="true" data-src="./video/o_tihonov.mp4" muted>
+         <div class="bg-video"> <video class="lazy" playsinline autoplay="true" loop="true" data-src="./video/o_tihonov.mp4" muted>
 																																																																				<source type="video/mp4" data-src="./video/o_tihonov.mp4" />
 																																																																			</video> </div>
-                                        </a>
-                                        <div class="video-descr">
-                                            <p class="video-theme">
-                                                Управление данными будущего
-                                            </p>
-                                            <p class="small w-70">Олег Тихонов</p>
-                                        </div>
-                                    </div>
-
-
-
-
-                                </div>
-                            </div>
-                        </div>
-                        <div class="pc-2">
-                            <a href="./img/about/palce@1x.png" data-fslightbox="galery" data-type="image" class="photo-wrapper c-c" rel="nofollow">
-                                <div class="photo-icon c-c">
-                                    <picture>
-                                        <source type="image/webp" data-srcset="./img/photo@1x.webp 1x, ./img/photo@2x.webp 2x">
-                                        <source type="image/png" data-srcset="./img/photo@1x.png 1x, ./img/photo@2x.png 2x">
-                                        <img class="lazy" width="80" height="80" data-src="./img/photo@1x.png" alt="Участники">
-                                    </picture>
-                                </div>
-                            </a>
-                            <a href="./img/about/palce@2x.png" data-fslightbox="galery" data-type="image" class="hidden-photo" rel="nofollow">
-                            </a>
-
-                            <div class="video-descr">
-                                <p class="video-theme">
-                                    Фото
-                                </p>
-                                <p class="small w-70">New IT Fest 2019</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="how-bg c-c">
-                <picture>
-                    <source type="image/webp" data-srcset="./img/how-bg@1x.webp 1x, ./img/how-bg@2x.webp 2x">
-                    <source type="image/jpeg" data-srcset="./img/how-bg@1x.jpg 1x, ./img/how-bg@1x.jpg 2x">
-                    <img class="lazy how-bg" width="80" height="80" data-src="./img/how-bg@1x.jpg" alt="Участники">
-                </picture>
-            </div>
-        </section>
-
-        <section class="programm pc-p6">
-            <div class="container">
-                <div class="progress-title c-s">
-                    <h2 class="h2">Программа</h2>
-                    <div class="in-progress c-s">
-                        <div class="pregress-icon"></div>
-                        <div class="progress-text">In progress</div>
-                    </div>
-                </div>
-                <p class="sub-title">Скоро здесь будет программа
-                </p>
-                <span class="program-tags">
-																	<span class="tag">Backend</span>
-                <span class="tag">Frontend</span>
-                <span class="tag">Data</span>
-                <span class="tag">AI</span>
-                <span class="tag">Infrastructure</span>
-                <span class="tag">DevOps</span>
-                <span class="tag">Soft skills</span>
-                <span class="tag">Management</span>
-                </span>
-            </div>
-        </section>
-
-
-
-        <section id="register" class="register pc-p6">
-            <div class="container">
-                <h2 class="h2">Регистрация</h2>
-                <p class="sub-title">Забронируй для себя место уже сейчас
-                </p>
-                <div class="info-form">
-                    <div class="r">
-                        <div class="pc-5">
-
-                            <div class="info-row">
-                                <p class="label">Площадка</p>
-                                <div class="c-place c-s">
-                                    <div class="c-place-icon rel lazy-rect">
-                                        <picture>
-                                            <source type="image/webp" data-srcset="./img/place-icon@1x.webp 1x, ./img/place-icon@2x.webp 2x">
-                                            <source type="image/png" data-srcset="./img/place-icon@1x.png 1x, ./img/place-icon@1x.png 2x">
-                                            <img class="lazy" width="80" height="80" data-src="./img/place-icon@1x.png" alt="Место">
-                                        </picture>
-                                    </div>
-                                    <div class="c-place-descr">
-                                        <p class="strong">Бизнес-центр “Тверь”</p>
-                                        <a href="#" class="small inline">Смоленский переулок 29</a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="info-row">
-                                <p class="label">Следи за новостями</p>
-                                <div class="socials c-s">
-                                    <a href="https://vk.com/newitfest" target="_blank" class="social-link c-c" rel="nofollow" title="New IT fest в ВК">
-                                        <div class="social-icon rel lazy-rect">
-                                            <picture>
-                                                <source type="image/webp" data-srcset="./img/vk@1x.webp 1x, ./img/vk@2x.webp 2x">
-                                                <source type="image/png" data-srcset="./img/vk@1x.png 1x, ./img/vk@1x.png 2x">
-                                                <img class="lazy" width="80" height="80" data-src="./img/vk@1x.png" alt="Место">
-                                            </picture>
-                                        </div>
-                                    </a>
-
-                                    <a href="https://www.instagram.com/new_it_fest_tver/" target="_blank" class="social-link c-c" rel="nofollow" title="New IT fest в Instagram">
-                                        <div class="social-icon rel lazy-rect">
-                                            <picture>
-                                                <source type="image/webp" data-srcset="./img/instagram@1x.webp 1x, ./img/instagram@2x.webp 2x">
-                                                <source type="image/png" data-srcset="./img/instagram@1x.png 1x, ./img/instagram@1x.png 2x">
-                                                <img class="lazy" width="80" height="80" data-src="./img/instagram@1x.png" alt="Место">
-                                            </picture>
-                                        </div>
-                                    </a>
-                                </div>
-                            </div>
-
-                            <div class="info-row">
-                                <p class="label">Email</p>
-                                <div class="contact-mail">
-                                    <a href="mailto:info@newitfest.ru" class="solo-link rel" title="Написать на почту" rel="nofollow">info@newitfest.ru</a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="pc-7">
-
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-    </main>
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-info">
-                <div class="log-descr">
-                    <div class="footer-logo">
-                        <img src="./img/new_it_logo.svg" alt="New IT fest logo">
-                    </div>
-                    <p class="footer-descr small color-70">New IT Fest – конференция об IT-трендах, организованная компанией Accenture.</p>
-                </div>
-                <div class="f-social">
-                    <a href="mailto:info@newitfest.ru" class="f-link" title="Написать на почту" rel="nofollow">info@newitfest.ru</a>
-                    <a href="https://vk.com/newitfest" class="f-link" title="New IT fest в ВК" rel="nofollow">ВКонтакте</a>
-                    <a href="https://www.instagram.com/new_it_fest_tver/" class="f-link" title="New IT fest в Instagram" rel="nofollow">Instagram</a>
-                </div>
-            </div>
-
-            <div class="copyright">
-                <p class="small color-70">©
-                    <a href="https://www.accenture.com/ru-ru" class="inline" rel="nofollow">Accenture</a>, 2021</p>
-            </div>
+        </a>
+        <div class="video-descr">
+         <p class="video-theme">
+          Управление данными будущего
+         </p>
+         <p class="small w-70">Олег Тихонов</p>
         </div>
-    </footer>
+       </div>
 
-</body>
-<script src="./js/app.js"></script>
+
+
+
+       <div class="pc-2 t-4 tl-6">
+        <a href="./img/about/palce@1x.png" data-fslightbox="galery" data-type="image" class="photo-wrapper c-c" rel="nofollow">
+         <div class="photo-icon c-c">
+          <picture>
+           <source type="image/webp" data-srcset="./img/photo@1x.webp 1x, ./img/photo@2x.webp 2x">
+           <source type="image/png" data-srcset="./img/photo@1x.png 1x, ./img/photo@2x.png 2x">
+           <img class="lazy" width="80" height="80" data-src="./img/photo@1x.png" alt="Участники">
+          </picture>
+         </div>
+        </a>
+        <a href="./img/about/palce@2x.png" data-fslightbox="galery" data-type="image" class="hidden-photo" rel="nofollow">
+        </a>
+        <div class="video-descr">
+         <p class="video-theme">
+          Фото
+         </p>
+         <p class="small w-70">New IT Fest 2019</p>
+        </div>
+       </div>
+      </div>
+     </div>
+    </div>
+    <div class="how-bg c-c">
+     <picture>
+      <source type="image/webp" data-srcset="./img/how-bg@1x.webp 1x, ./img/how-bg@2x.webp 2x">
+      <source type="image/jpeg" data-srcset="./img/how-bg@1x.jpg 1x, ./img/how-bg@1x.jpg 2x">
+      <img class="lazy how-bg" width="80" height="80" data-src="./img/how-bg@1x.jpg" alt="Участники">
+     </picture>
+    </div>
+   </section>
+
+   <section class="speakers">
+    <div class="container">
+     <h2 class="h2">Спикеры</h2>
+     <p class="sub-title">Эксперты-практики из различных областей IT
+     </p>
+     <div class="speakers-list">
+
+
+      <a href="https://newitfest.ru/alisa-martynova" class="speaker 399 2" title="Узнать больше о 17+ способов стартовать сообщество с нуля, даже если не нравится говорить с людьми">
+       <div class="c-s">
+        <span class="report-type"><span>
+										Soft Skills </span></span>
+       </div>
+       <div class="speaker-photo c-s ">
+        <div class="speaker-img ">
+         <div class="speaker-inner">
+          <img src="https://newitfest.ru/wp-content/uploads/2022/01/Intersect-10.png" alt="Фото - Алиса Мартынова">
+         </div>
+        </div>
+       </div>
+       <div class="speaker-info">
+        <p class="speaker-name">
+
+         Алиса Мартынова </p>
+        <p class="company-name w-70">RndTech</p>
+        <p class="speaker-company w-70 no-margin">
+         17+ способов стартовать сообщество с нуля, даже если не нравится говорить с людьми </p>
+       </div>
+       <div class="hover-icon dif-3">
+        <div class="dif s-s f-column">
+         <span class="dif-text">Сложность</span>
+         <div class="dif-couner c-s">
+          <div class="dif-indicator c-s">
+           <div class="dif-line"></div>
+          </div><span class="dif-text">1 из 3</span>
+         </div>
+        </div>
+        <div class="icon-more c-c">
+         <img src="./img/read-more.png" alt="Узнать больше">
+        </div>
+       </div>
+      </a>
+
+      <a href="https://newitfest.ru/vitalij-poleshhuk-vladislav-korobov" class="speaker 394 " title="Узнать больше о Нагруженные кредитные калькуляторы">
+       <div class="c-s">
+        <span class="report-type"><span>
+										Frontend </span></span>
+       </div>
+       <div class="speaker-photo c-s double-foto">
+        <div class="speaker-img accenture">
+         <div class="speaker-inner">
+          <img src="https://newitfest.ru/wp-content/uploads/2022/01/Intersect-9.png" alt="Фото - Виталий Полещук ">
+         </div>
+        </div>
+        <div class="speaker-img accenture">
+         <div class="speaker-inner">
+          <img src="https://newitfest.ru/wp-content/uploads/2022/01/Intersemct.png" alt="Фото - Владислав Коробов">
+         </div>
+        </div>
+       </div>
+       <div class="speaker-info">
+        <p class="speaker-name">
+
+         Виталий Полещук &amp; Владислав Коробов </p>
+        <p class="company-name w-70">Accenture</p>
+        <p class="speaker-company w-70 no-margin">
+         Нагруженные кредитные калькуляторы </p>
+       </div>
+       <div class="hover-icon c-e">
+        <div class="icon-more c-c">
+         <img src="./img/read-more.png" alt="Узнать больше">
+        </div>
+       </div>
+      </a>
+
+      <a href="https://newitfest.ru/vadim-martynov" class="speaker 389 " title="Узнать больше о Task.WhenAll, ContinueWith и ещё пара способов убить производительность приложения в .net">
+       <div class="c-s">
+        <span class="report-type"><span>
+										.NET </span></span>
+       </div>
+       <div class="speaker-photo c-s ">
+        <div class="speaker-img ">
+         <div class="speaker-inner">
+          <img src="https://newitfest.ru/wp-content/uploads/2022/01/Intersect-8.png" alt="Фото - Вадим Мартынов">
+         </div>
+        </div>
+       </div>
+       <div class="speaker-info">
+        <p class="speaker-name">
+
+         Вадим Мартынов </p>
+        <p class="company-name w-70">СКБ Контур</p>
+        <p class="speaker-company w-70 no-margin">
+         Task.WhenAll, ContinueWith и ещё пара способов убить производительность приложения в .net </p>
+       </div>
+       <div class="hover-icon c-e">
+        <div class="icon-more c-c">
+         <img src="./img/read-more.png" alt="Узнать больше">
+        </div>
+       </div>
+      </a>
+
+      <a href="https://newitfest.ru/aleksandr-lebedev" class="speaker 385 " title="Узнать больше о Как мы внедряли микрофронты">
+       <div class="c-s">
+        <span class="report-type"><span>
+										Frontend </span></span>
+       </div>
+       <div class="speaker-photo c-s ">
+        <div class="speaker-img accenture">
+         <div class="speaker-inner">
+          <img src="https://newitfest.ru/wp-content/uploads/2022/01/Intersect-7.png" alt="Фото - Александр Лебедев ">
+         </div>
+        </div>
+       </div>
+       <div class="speaker-info">
+        <p class="speaker-name">
+
+         Александр Лебедев </p>
+        <p class="company-name w-70">Accenture</p>
+        <p class="speaker-company w-70 no-margin">
+         Как мы внедряли микрофронты </p>
+       </div>
+       <div class="hover-icon c-e">
+        <div class="icon-more c-c">
+         <img src="./img/read-more.png" alt="Узнать больше">
+        </div>
+       </div>
+      </a>
+
+      <a href="https://newitfest.ru/anton-vasilev" class="speaker 374 " title="Узнать больше о Внедрение и поддержка ​ автоматизации тестирования​ low-code инструментом Tosca">
+       <div class="c-s">
+        <span class="report-type"><span>
+										Testing </span></span>
+       </div>
+       <div class="speaker-photo c-s ">
+        <div class="speaker-img accenture">
+         <div class="speaker-inner">
+          <img src="https://newitfest.ru/wp-content/uploads/2022/01/Intersect-6.png" alt="Фото - Антон Васильев">
+         </div>
+        </div>
+       </div>
+       <div class="speaker-info">
+        <p class="speaker-name">
+
+         Антон Васильев </p>
+        <p class="company-name w-70">Accenture</p>
+        <p class="speaker-company w-70 no-margin">
+         Внедрение и поддержка ​ автоматизации тестирования​ low-code инструментом Tosca </p>
+       </div>
+       <div class="hover-icon c-e">
+        <div class="icon-more c-c">
+         <img src="./img/read-more.png" alt="Узнать больше">
+        </div>
+       </div>
+      </a>
+
+      <a href="https://newitfest.ru/dmitrij-modestov" class="speaker 366 " title="Узнать больше о Личная эффективность на удалёнке">
+       <div class="c-s">
+        <span class="report-type"><span>
+										Soft Skills </span></span>
+       </div>
+       <div class="speaker-photo c-s ">
+        <div class="speaker-img ">
+         <div class="speaker-inner">
+          <img src="https://newitfest.ru/wp-content/uploads/2022/01/Intersect-5.png" alt="Фото - Дмитрий Модестов">
+         </div>
+        </div>
+       </div>
+       <div class="speaker-info">
+        <p class="speaker-name">
+
+         Дмитрий Модестов </p>
+        <p class="company-name w-70">Академия бизнеса EY</p>
+        <p class="speaker-company w-70 no-margin">
+         Личная эффективность на удалёнке </p>
+       </div>
+       <div class="hover-icon c-e">
+        <div class="icon-more c-c">
+         <img src="./img/read-more.png" alt="Узнать больше">
+        </div>
+       </div>
+      </a>
+
+      <a href="https://newitfest.ru/timur-kalinin" class="speaker 359 1" title="Узнать больше о Почему нас до сих пор не заменили роботы. Проблематика внедрения RPA">
+       <div class="c-s">
+        <span class="report-type"><span>
+										RPA </span></span>
+       </div>
+       <div class="speaker-photo c-s ">
+        <div class="speaker-img accenture">
+         <div class="speaker-inner">
+          <img src="https://newitfest.ru/wp-content/uploads/2022/01/Intersect-4.png" alt="Фото - Тимур Калинин​">
+         </div>
+        </div>
+       </div>
+       <div class="speaker-info">
+        <p class="speaker-name">
+
+         Тимур Калинин​ </p>
+        <p class="company-name w-70">Accenture</p>
+        <p class="speaker-company w-70 no-margin">
+         Почему нас до сих пор не заменили роботы. Проблематика внедрения RPA </p>
+       </div>
+       <div class="hover-icon c-e">
+        <div class="icon-more c-c">
+         <img src="./img/read-more.png" alt="Узнать больше">
+        </div>
+       </div>
+      </a>
+
+      <a href="https://newitfest.ru/vera-vishnyakova" class="speaker 349 " title="Узнать больше о Проекты на микросервисах от старта до прода. Тренируемся на котиках">
+       <div class="c-s">
+        <span class="report-type"><span>
+										System Analysis </span></span>
+       </div>
+       <div class="speaker-photo c-s ">
+        <div class="speaker-img accenture">
+         <div class="speaker-inner">
+          <img src="https://newitfest.ru/wp-content/uploads/2022/01/Intersect-3.png" alt="Фото - Вера Вишнякова">
+         </div>
+        </div>
+       </div>
+       <div class="speaker-info">
+        <p class="speaker-name">
+
+         Вера Вишнякова </p>
+        <p class="company-name w-70">Accenture</p>
+        <p class="speaker-company w-70 no-margin">
+         Проекты на микросервисах от старта до прода. Тренируемся на котиках </p>
+       </div>
+       <div class="hover-icon c-e">
+        <div class="icon-more c-c">
+         <img src="./img/read-more.png" alt="Узнать больше">
+        </div>
+       </div>
+      </a>
+
+      <a href="https://newitfest.ru/denis-sergeev" class="speaker 337 " title="Узнать больше о «Нагрузка лямбды джейметром​» или «не повторяйте моих ошибок»">
+       <div class="c-s">
+        <span class="report-type"><span>
+										Testing </span></span>
+       </div>
+       <div class="speaker-photo c-s ">
+        <div class="speaker-img accenture">
+         <div class="speaker-inner">
+          <img src="https://newitfest.ru/wp-content/uploads/2022/01/Intersect-2.png" alt="Фото - Денис Сергеев">
+         </div>
+        </div>
+       </div>
+       <div class="speaker-info">
+        <p class="speaker-name">
+
+         Денис Сергеев </p>
+        <p class="company-name w-70">Accenture</p>
+        <p class="speaker-company w-70 no-margin">
+         «Нагрузка лямбды джейметром​» или «не повторяйте моих ошибок» </p>
+       </div>
+       <div class="hover-icon c-e">
+        <div class="icon-more c-c">
+         <img src="./img/read-more.png" alt="Узнать больше">
+        </div>
+       </div>
+      </a>
+
+      <a href="https://newitfest.ru/mihail-bondarenko" class="speaker 330 " title="Узнать больше о Сказ о том, как один большой проект с Apache Kafka дружил">
+       <div class="c-s">
+        <span class="report-type"><span>
+										Java </span></span>
+       </div>
+       <div class="speaker-photo c-s ">
+        <div class="speaker-img accenture">
+         <div class="speaker-inner">
+          <img src="https://newitfest.ru/wp-content/uploads/2022/01/Intersect-1.png" alt="Фото - Михаил Бондаренко">
+         </div>
+        </div>
+       </div>
+       <div class="speaker-info">
+        <p class="speaker-name">
+
+         Михаил Бондаренко </p>
+        <p class="company-name w-70">Accenture</p>
+        <p class="speaker-company w-70 no-margin">
+         Сказ о том, как один большой проект с Apache Kafka дружил </p>
+       </div>
+       <div class="hover-icon c-e">
+        <div class="icon-more c-c">
+         <img src="./img/read-more.png" alt="Узнать больше">
+        </div>
+       </div>
+      </a>
+
+      <a href="https://newitfest.ru/vitalij-chizhkov" class="speaker 314 " title="Узнать больше о Кодогенераторы Java под капотом">
+       <div class="c-s">
+        <span class="report-type"><span>
+										Java </span></span>
+       </div>
+       <div class="speaker-photo c-s ">
+        <div class="speaker-img accenture">
+         <div class="speaker-inner">
+          <img src="https://newitfest.ru/wp-content/uploads/2022/01/Intersect.png" alt="Фото - Виталий Чижков">
+         </div>
+        </div>
+       </div>
+       <div class="speaker-info">
+        <p class="speaker-name">
+
+         Виталий Чижков </p>
+        <p class="company-name w-70">Accenture</p>
+        <p class="speaker-company w-70 no-margin">
+         Кодогенераторы Java под капотом </p>
+       </div>
+       <div class="hover-icon c-e">
+        <div class="icon-more c-c">
+         <img src="./img/read-more.png" alt="Узнать больше">
+        </div>
+       </div>
+      </a>
+
+      <a href="https://newitfest.ru/sveta-andrianova" class="speaker 302 " title="Узнать больше о E-Commerce как направление IT-проектов">
+       <div class="c-s">
+        <span class="report-type"><span>
+										E-Commerce </span></span>
+       </div>
+       <div class="speaker-photo c-s ">
+        <div class="speaker-img accenture">
+         <div class="speaker-inner">
+          <img src="https://newitfest.ru/wp-content/uploads/2022/01/Frame-1557-1.jpg" alt="Фото - Светлана Андрианова">
+         </div>
+        </div>
+       </div>
+       <div class="speaker-info">
+        <p class="speaker-name">
+
+         Светлана Андрианова </p>
+        <p class="company-name w-70">Accenture</p>
+        <p class="speaker-company w-70 no-margin">
+         E-Commerce как направление IT-проектов </p>
+       </div>
+       <div class="hover-icon c-e">
+        <div class="icon-more c-c">
+         <img src="./img/read-more.png" alt="Узнать больше">
+        </div>
+       </div>
+      </a>
+
+      <a href="https://newitfest.ru/maksim-kolibaba" class="speaker 297 " title="Узнать больше о SAP Commerce: что это и почему его стоит полюбить">
+       <div class="c-s">
+        <span class="report-type"><span>
+										E-Commerce </span></span>
+       </div>
+       <div class="speaker-photo c-s ">
+        <div class="speaker-img accenture">
+         <div class="speaker-inner">
+          <img src="https://newitfest.ru/wp-content/uploads/2022/01/Frame-1557.jpg" alt="Фото - Максим Колибаба">
+         </div>
+        </div>
+       </div>
+       <div class="speaker-info">
+        <p class="speaker-name">
+
+         Максим Колибаба </p>
+        <p class="company-name w-70">Accenture</p>
+        <p class="speaker-company w-70 no-margin">
+         SAP Commerce: что это и почему его стоит полюбить </p>
+       </div>
+       <div class="hover-icon c-e">
+        <div class="icon-more c-c">
+         <img src="./img/read-more.png" alt="Узнать больше">
+        </div>
+       </div>
+      </a>
+
+      <a href="https://newitfest.ru/andrej-timoshenko-marat-cihmistrov" class="speaker 244 " title="Узнать больше о Безопасная разработка: от «Hello, World»  до AI/ML">
+       <div class="c-s">
+        <span class="report-type"><span>
+										Infrastructure &amp; Security </span></span>
+       </div>
+       <div class="speaker-photo c-s double-foto">
+        <div class="speaker-img accenture">
+         <div class="speaker-inner">
+          <img src="https://newitfest.ru/wp-content/uploads/2022/01/timoshenko.jpg" alt="Фото - Андрей Тимошенко">
+         </div>
+        </div>
+        <div class="speaker-img accenture">
+         <div class="speaker-inner">
+          <img src="https://newitfest.ru/wp-content/uploads/2022/01/Chihmestrov.jpg" alt="Фото - Марат Цихмистров">
+         </div>
+        </div>
+       </div>
+       <div class="speaker-info">
+        <p class="speaker-name">
+
+         Андрей Тимошенко &amp; Марат Цихмистров </p>
+        <p class="company-name w-70">Accenture</p>
+        <p class="speaker-company w-70 no-margin">
+         Безопасная разработка: от «Hello, World» до AI/ML </p>
+       </div>
+       <div class="hover-icon c-e">
+        <div class="icon-more c-c">
+         <img src="./img/read-more.png" alt="Узнать больше">
+        </div>
+       </div>
+      </a>
+
+     </div>
+    </div>
+   </section>
+
+
+
+
+
+   <section class="programm pc-p6">
+    <div class="container">
+     <div class="progress-title">
+      <h2 class="h2">Программа</h2>
+     </div>
+     <p class="sub-title">Более 20 докладов с кейсами о применении новейших технологий</p>
+    </div>
+    <div class="programm-inner">
+
+     <div class="time-el c-c time-11"><span>11:00</span></div>
+     <div class="time-el c-c time-11-45 time-11-55"><span>11:15 - 11:55</span></div>
+     <div class="time-el c-c time-12-00 time-12-40"><span>12:00 - 12:40</span></div>
+     <div class="time-el c-c time-12-45 time-13-30"><span>12:45 - 13:30</span></div>
+     <div class="time-el c-c time-13-35 time-14-05"><span>13:35 - 14:05</span></div>
+     <div class="time-el c-c time-14-10 time-14-50"><span>14:10 - 14:50</span></div>
+     <div class="time-el c-c time-15-00"><span>15:00</span></div>
+
+
+     <div class="shedule-head place-1">
+      Зал 1
+     </div>
+     <div class="shedule-head place-2">
+      Зал 2
+     </div>
+     <div class="shedule-head place-3">
+      Зал 3
+     </div>
+     <div class="shedule-head place-4">
+      Зал 4
+     </div>
+     <div class="shedule-head place-5">
+      Зал 5
+     </div>
+
+     <a href="#" class="shedule-el place-3 time-15-00" style="color: #EFDB25;">
+      <div class="shedule-el-label c-c">
+       <span>DevOps</span>
+      </div>
+      <div class="shedule-info">
+       <time class="shedule-time">11-45 - 11-55</time>
+       <p class="shedule-name no-margin">«Как управлять доставкой результата при разработке продуктов?»</p>
+       <h3 class="shedule-user">Александр Серпичев</h3>
+       <p class="shedule-user-company no-margin">Accenture</p>
+      </div>
+      <div class="shedule-icon c-c">
+       <img class="lazy" data-src="./img/eye-icon@2x.png" alt="Иконка глаза">
+      </div>
+     </a>
+     <a href="# " class="shedule-el place-2 time-12-45 time-13-30 " style="color: #8d0bf7; ">
+      <div class="shedule-el-label c-c ">
+       <span>DevOps</span>
+      </div>
+      <div class="shedule-info ">
+       <time class="shedule-time ">11-45 - 11-55</time>
+       <p class="shedule-name no-margin ">«Как управлять доставкой результата при разработке продуктов?»</p>
+       <h3 class="shedule-user ">Александр Серпичев</h3>
+       <p class="shedule-user-company no-margin ">Accenture</p>
+      </div>
+      <div class="shedule-icon c-c ">
+       <img class="lazy" data-src="./img/eye-icon@2x.png" alt="Иконка глаза">
+      </div>
+     </a>
+
+    </div>
+
+   </section>
+
+
+   <section id="register " class="register pc-p6 ">
+    <div class="container ">
+     <h2 class="h2 ">Регистрация</h2>
+     <p class="sub-title ">Забронируй для себя место уже сейчас
+     </p>
+     <div class="info-form ">
+      <div class="r ">
+       <div class="pc-5 t-12 t-order-1 ">
+
+        <div class="info-contacts ">
+         <div class="info-row ">
+          <div class="info-row-inner ">
+           <p class="label ">Площадка</p>
+           <div class="c-place c-s ">
+            <div class="c-place-icon rel lazy-rect ">
+             <picture>
+              <source type="image/webp " data-srcset="./img/place-icon@1x.webp 1x, ./img/place-icon@2x.webp 2x ">
+              <source type="image/png " data-srcset="./img/place-icon@1x.png 1x, ./img/place-icon@1x.png 2x ">
+              <img class="lazy " width="80 " height="80 " data-src="./img/place-icon@1x.png " alt="Место ">
+             </picture>
+            </div>
+            <div class="c-place-descr ">
+             <p class="strong ">Бизнес-центр “Тверь”</p>
+             <a href="https://goo.gl/maps/1RcBM4KE3Sxd1hfo7 " target="_blank " class="small inline ">Смоленский переулок 29</a>
+            </div>
+           </div>
+          </div>
+         </div>
+         <div class="info-row ">
+          <div class="info-row-inner ">
+           <p class="label ">Следи за новостями</p>
+           <div class="socials c-s ">
+            <a href="https://vk.com/newitfest " target="_blank " class="social-link c-c " rel="nofollow " title="New IT fest в ВК ">
+             <div class="social-icon rel lazy-rect ">
+              <picture>
+               <source type="image/webp " data-srcset="./img/vk@1x.webp 1x, ./img/vk@2x.webp 2x ">
+               <source type="image/png " data-srcset="./img/vk@1x.png 1x, ./img/vk@1x.png 2x ">
+               <img class="lazy " width="80 " height="80 " data-src="./img/vk@1x.png " alt="Место ">
+              </picture>
+             </div>
+            </a>
+
+            <a href="https://www.instagram.com/new_it_fest_tver/ " target="_blank " class="social-link c-c " rel="nofollow " title="New IT fest в Instagram ">
+             <div class="social-icon rel lazy-rect ">
+              <picture>
+               <source type="image/webp " data-srcset="./img/instagram@1x.webp 1x, ./img/instagram@2x.webp 2x ">
+               <source type="image/png " data-srcset="./img/instagram@1x.png 1x, ./img/instagram@1x.png 2x ">
+               <img class="lazy " width="80 " height="80 " data-src="./img/instagram@1x.png " alt="Место ">
+              </picture>
+             </div>
+            </a>
+           </div>
+          </div>
+         </div>
+
+         <div class="info-row ">
+          <div class="info-row-inner ">
+           <p class="label ">Email</p>
+           <div class="contact-mail ">
+            <a href="mailto:info@newitfest.ru " class="solo-link rel " title="Написать на почту " rel="nofollow ">info@newitfest.ru</a>
+           </div>
+          </div>
+         </div>
+        </div>
+       </div>
+       <div class="pc-7 t-12 t-order-0 ">
+        <div class="form-inner ">
+         <div class="form-content ">
+          <div class="form-form-paceholder " style="width: 100%; padding-bottom: 1170px; background: #fefefe; "></div>
+         </div>
+
+         <div class="form-submited c-c f-column " onclick="this.classList.toggle( 'form-send') ">
+          <div class="success-animation ">
+           <svg class="checkmark " xmlns="http://www.w3.org/2000/svg " viewBox="0 0 52 52 ">
+		<circle class="checkmark__circle " cx="26 " cy="26 " r="25 " fill="none " />
+		<path class="checkmark__check " fill="none " d="M14.1 27.2l7.1 7.2 16.7-16.8 " />
+	</svg>
+          </div>
+          <p class="sub-title ">Регистрация прошла успешно</p>
+          <p class="w-70 ">Следи за новостями и ждем тебя в офлайне!
+         </div>
+
+         <button class="sent ">sent</button>
+
+        </div>
+        <script>
+         let formContent = document.querySelector('.form-content');
+         let redisterForm = document.querySelector('#register')
+         document.querySelector('.sent').addEventListener('click', function(e) {
+
+          redisterForm.scrollIntoView({
+           behavior: 'smooth',
+           block: 'start'
+          });
+          formContent.style.height = formContent.offsetHeight + 'px'
+
+
+          if (window.matchMedia("(max-width: 854px) ").matches) {
+           setTimeout(() => {
+            document.querySelector('.form-submited').classList.add('form-send')
+            formContent.style.height = '400px'
+           }, 50)
+          } else {
+           document.querySelector('.form-submited').classList.add('form-send')
+          }
+          setTimeout(() => {
+           document.querySelector('.form-form-paceholder').remove()
+          })
+
+
+         })
+        </script>
+
+       </div>
+      </div>
+     </div>
+    </div>
+   </section>
+  </main>
+  <footer class="footer ">
+   <div class="container ">
+    <div class="footer-info ">
+     <div class="log-descr ">
+      <div class="footer-logo ">
+       <img src="./img/new_it_logo.svg " alt="New IT fest logo ">
+      </div>
+      <p class="footer-descr small color-70 ">New IT Fest – конференция об IT-трендах, организованная компанией Accenture.</p>
+     </div>
+     <div class="f-social ">
+      <a href="mailto:info@newitfest.ru " class="f-link " title="Написать на почту " rel="nofollow ">info@newitfest.ru</a>
+      <a href="https://vk.com/newitfest " class="f-link " title="New IT fest в ВК " rel="nofollow ">ВКонтакте</a>
+      <a href="https://www.instagram.com/new_it_fest_tver/ " class="f-link " title="New IT fest в Instagram " rel="nofollow ">Instagram</a>
+     </div>
+    </div>
+
+    <div class="copyright ">
+     <p class="small color-70 ">©
+      <a href="https://www.accenture.com/ru-ru " class="inline " rel="nofollow ">Accenture</a>, 2021</p>
+    </div>
+   </div>
+  </footer>
+
+ </body>
+ <script src="./js/app.js "></script>
 
 </html>
